@@ -1,0 +1,158 @@
+Projet SQL: E-Commerce (FR)
+
+Description: 
+
+    Créer une base de donnée d'un site web d'E-Commerce.
+
+Mise en place:
+
+    Pré-requis:
+
+        Python (extension VS Code)
+        SQLite (extension VS Code)
+        SQLite Viewer (extension VS Code)
+        SQLTools (extension VS Code)
+        SQLTools SQLite (extension VS Code)
+        Faker (pip install faker)
+
+    Mon MCD:
+
+        UML.loo est un fichier looping
+
+        Installation de l'application Looping:
+
+            Allez sur: https://www.looping-mcd.fr/
+            Cliquez sur 'Télécharger'
+
+        E/A : Entreprise Architect, outil qui m'a permis de créer l'UML.
+        UML : Unifiend Modeling Language, outil de visualisation du diagramme.
+        MLD : Multi Level Dependency, outil permettant de visualiser les clés secondaires.
+
+    Ma Base de données:
+        
+        Connexion:
+
+            Pour la connexion de ma base de donnée, j'ai utilisé l'extension SQLTools sur VSCode (database), puis j'ai établi une connection SQLite avec mon fichier .db
+
+        Le fichier .sql:
+        
+            Le fichier ne run que la derniere commande. Cependant j'ai laissé l'intégralité des requêtes de création de table dedans.
+           
+            Pour Run:
+            
+                Ctrl + Enter 
+        
+        Le script .py:
+
+            Les lignes commentés 134 à 140 permettent de clear les données des tables.
+
+            Pour Run:
+
+                Ctrl + Alt + N (ou appuyer sur le bouton 'play' en haut à droite du code)
+
+
+
+Problèmes dans mon code:
+
+    Normalement il ne devrait pas y en avoir
+
+
+Status du projet:
+
+    Mon projet est terminé, y compris les tables bonus
+
+
+Sources:
+
+    https://sql.sh/cours
+    https://www.sqltutorial.org/
+    https://dev.to/iainfreestone/20-resources-for-generating-fake-and-mock-data-55g1
+    https://ytrack.learn.ynov.com/intra/pyc/piscine-sql?event=1919
+    https://www.w3schools.com/sql/default.asp
+    https://fakerjs.dev/api/commerce.html#product
+    https://chat.openai.com/
+    https://faker.readthedocs.io/en/master/index.html
+
+Auteur: LAO Jacques B2 A Info 
+
+
+
+------------------------------------------------------------------------------------------------------
+
+SQL Project: E-Commerce (ENG)
+
+Description: 
+
+    Create a database of an e-commerce website.
+
+Setup:
+
+    Prerequisites:
+
+        Python (VS Code extension)
+        SQLite (VS Code extension)
+        SQLite Viewer (VS Code extension)
+        SQLTools (VS Code extension)
+        SQLTools SQLite (VS Code extension)
+        Faker (pip install faker)
+
+    My MCD:
+
+        UML.loo is a looping file
+
+        Installing the Looping application:
+
+            Go to: https://www.looping-mcd.fr/
+            Click on 'Download'
+
+        E/A : Entreprise Architect, tool that allowed me to create my UML.
+        UML : Unifiend Modeling Language, tool that visualises my diagram.
+        MLD : Multi Level Dependency, tool that allows me to see my secondary/foreign keys.
+
+    My Database:
+        
+        Connection:
+
+            For the connection to my database, I used the VSCode extension SQLTools (Database), then I established a SQLite connection to my .db file
+
+
+        The .sql file:
+        
+           The file only runs the last query. Howerver I left the entire queries I've used to create the various tables that reside in this file
+
+            To Run:
+            
+                Ctrl + Enter 
+        
+        The .py file:
+
+            The commented lines 134 to 140 allows you to clear the datas inserted in the various tables
+
+            To Run:
+
+                Ctrl + Alt + N (or press the 'play' button on the top right of your screen)
+
+
+
+Problems in my code:
+
+    There shouldn't be any
+
+
+Status of my projet:
+
+    My project is finished including the bonus tables
+
+
+Sources:
+
+    https://sql.sh/cours
+    https://www.sqltutorial.org/
+    https://dev.to/iainfreestone/20-resources-for-generating-fake-and-mock-data-55g1
+    https://ytrack.learn.ynov.com/intra/pyc/piscine-sql?event=1919
+    https://www.w3schools.com/sql/default.asp
+    https://fakerjs.dev/api/commerce.html#product
+    https://chat.openai.com/
+    https://faker.readthedocs.io/en/master/index.html
+
+Owner: LAO Jacques B2 A Info 

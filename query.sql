@@ -1,0 +1,87 @@
+CREATE TABLE IF NOT EXISTS User (
+    UserID INTEGER PRIMARY KEY AUTOINCREMENT,
+    Username TEXT NOT NULL,
+    FirstName TEXT NOT NULL,
+    LastName TEXT NOT NULL,
+    Email TEXT NOT NULL,
+    Password TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Address (
+    AddressID INTEGER PRIMARY KEY AUTOINCREMENT,
+    UserID INTEGER,
+    StreetAddress TEXT NOT NULL,
+    City TEXT NOT NULL,
+    StateProvince TEXT,
+    PostalCode TEXT NOT NULL,
+    Country TEXT NOT NULL,
+    FOREIGN KEY (UserID) REFERENCES User(UserID)
+);
+
+CREATE TABLE IF NOT EXISTS Product (
+    ProductID INTEGER PRIMARY KEY AUTOINCREMENT,
+    ProductName TEXT NOT NULL,
+    Description TEXT,
+    Price REAL NOT NULL,
+    Category TEXT
+);
+
+CREATE TABLE IF NOT EXISTS Cart (
+    CartID INTEGER PRIMARY KEY AUTOINCREMENT,
+    UserID INTEGER,
+    ProductID INTEGER,
+    Quantity INTEGER NOT NULL,
+    FOREIGN KEY (UserID) REFERENCES User(UserID),
+    FOREIGN KEY (ProductID) REFERENCES Product(ProductID)
+);
+
+CREATE TABLE IF NOT EXISTS Command (
+    CommandID INTEGER PRIMARY KEY AUTOINCREMENT,
+    UserID INTEGER,
+    CartID INTEGER,
+    OrderDate TEXT NOT NULL,
+    ShippingAddressID INTEGER,
+    FOREIGN KEY (UserID) REFERENCES User(UserID),
+    FOREIGN KEY (CartID) REFERENCES Cart(CartID),
+    FOREIGN KEY (ShippingAddressID) REFERENCES Address(AddressID)
+);
+
+CREATE TABLE IF NOT EXISTS Invoices (
+    InvoiceID INTEGER PRIMARY KEY AUTOINCREMENT,
+    CommandID INTEGER,
+    InvoiceDate TEXT NOT NULL, 
+    TotalAmount REAL NOT NULL,
+    PaymentStatus TEXT,
+    FOREIGN KEY (CommandID) REFERENCES Command(CommandID)
+);
+
+CREATE TABLE IF NOT EXISTS Photo (
+    PhotoID INTEGER PRIMARY KEY AUTOINCREMENT,
+    UserID INTEGER,
+    ProductID INTEGER,
+    FilePath TEXT NOT NULL,
+    Caption TEXT,
+    UploadDate TEXT NOT NULL, 
+    FOREIGN KEY (UserID) REFERENCES User(UserID),
+    FOREIGN KEY (ProductID) REFERENCES Product(ProductID)
+);
+
+CREATE TABLE IF NOT EXISTS Rate (
+    RateID INTEGER PRIMARY KEY AUTOINCREMENT,
+    UserID INTEGER,
+    ProductID INTEGER,
+    RatingValue INTEGER NOT NULL,
+    Review TEXT,
+    Date TEXT NOT NULL, 
+    FOREIGN KEY (UserID) REFERENCES User(UserID),
+    FOREIGN KEY (ProductID) REFERENCES Product(ProductID)
+);
+
+CREATE TABLE IF NOT EXISTS Payment (
+    PaymentID INTEGER PRIMARY KEY AUTOINCREMENT,
+    UserID INTEGER,
+    PaymentMethod TEXT NOT NULL,
+    CardNumber TEXT, 
+    ExpirationDate TEXT, 
+    FOREIGN KEY (UserID) REFERENCES User(UserID)
+);
